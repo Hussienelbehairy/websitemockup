@@ -1,0 +1,78 @@
+export const footerContent = {
+  en: {
+    description:
+      "Staron Egypt is a supply-and-apply contractor delivering design, fabrication, and installation for premium surface materials.",
+    sitemap: [
+      { label: "Home", href: "/" },
+      { label: "About", href: "/about" },
+      { label: "Brands", href: "/brands" },
+      { label: "Solutions", href: "/solutions" },
+      { label: "Blog", href: "/blog" },
+      { label: "Contact", href: "/contact" },
+      { label: "Catalog", href: "/catalog" },
+      { label: "Online Store", href: "/store" },
+    ],
+    contacts: [
+      { label: "Head Office", detail: "Katameya, New Cairo", href: "#" },
+      { label: "Warehouse", detail: "Sokhna Highway Hub", href: "#" },
+      { label: "Factory", detail: "10th of Ramadan City", href: "#" },
+      { label: "Phone", detail: "+20 2 2750 6000", href: "tel:+20227506000" },
+      {
+        label: "Email",
+        detail: "hello@staron-egypt.com",
+        href: "mailto:hello@staron-egypt.com",
+      },
+    ],
+    socials: [
+      "Facebook",
+      "LinkedIn",
+      "Instagram",
+      "YouTube",
+      "X",
+      "TikTok",
+      "Snapchat",
+      "WhatsApp",
+    ],
+    workWeek: "Sunday - Thursday · 9:00 AM - 6:00 PM",
+    policy: "Privacy Policy",
+    terms: "Terms & Conditions",
+  },
+  ar: {
+    description:
+      "ستارون مصر مقاول توريد وتركيب يقدم التصميم والتصنيع والتركيب لخامات الأسطح المميزة.",
+    sitemap: [
+      { label: "الرئيسية", href: "/" },
+      { label: "عنّا", href: "/about" },
+      { label: "البراندات", href: "/brands" },
+      { label: "الحلول", href: "/solutions" },
+      { label: "المدونة", href: "/blog" },
+      { label: "تواصل", href: "/contact" },
+      { label: "الكتالوج", href: "/catalog" },
+      { label: "المتجر", href: "/store" },
+    ],
+    contacts: [
+      { label: "المكتب الرئيسي", detail: "القطامية، القاهرة الجديدة", href: "#" },
+      { label: "المخزن", detail: "طريق السخنة", href: "#" },
+      { label: "المصنع", detail: "العاشر من رمضان", href: "#" },
+      { label: "تليفون", detail: "+20 2 2750 6000", href: "tel:+20227506000" },
+      {
+        label: "بريد إلكتروني",
+        detail: "hello@staron-egypt.com",
+        href: "mailto:hello@staron-egypt.com",
+      },
+    ],
+    socials: [
+      "Facebook",
+      "LinkedIn",
+      "Instagram",
+      "YouTube",
+      "X",
+      "TikTok",
+      "Snapchat",
+      "WhatsApp",
+    ],
+    workWeek: "الأحد - الخميس · ٩ صباحاً - ٦ مساءً",
+    policy: "سياسة الخصوصية",
+    terms: "الشروط والأحكام",
+  },
+};

@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: #0d4b73;
+  --color-primary-soft: #1670a3;
+  --color-primary-dark: #062f4f;
+  --color-accent: #d49b27;
+  --color-accent-soft: #f0b54b;
+  --color-background: #f8fbff;
+  --color-background-soft: #eef3fa;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f5f7fb;
+  --color-border-subtle: #cdd7e6;
+  --color-border-strong: #aebcd3;
+  --color-text-main: #151b23;
+  --color-text-muted: #6b7280;
+  --color-text-inverse: #ffffff;
+  --color-text-accent: #d49b27;
+  --color-link: #0d4b73;
+  --color-link-hover: #062f4f;
+  --color-success: #15803d;
+  --color-warning: #b0892b;
+  --color-error: #b91c1c;
+  --font-sans: var(--font-body), system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-display), var(--font-arabic), var(--font-body),
+    system-ui, sans-serif;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --shadow-soft: 0 26px 70px rgba(6, 47, 79, 0.12);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+  background:
+    radial-gradient(120% 120% at 15% 15%, rgba(13, 75, 115, 0.18) 0, transparent 40%),
+    radial-gradient(120% 120% at 85% 10%, rgba(212, 155, 39, 0.16) 0, transparent 38%),
+    linear-gradient(180deg, #f9fbff 0%, #f3f5f8 40%, #fbf7ef 100%);
+  background-attachment: fixed;
+  color: var(--color-text-main);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+::selection {
+  background: rgba(0, 66, 116, 0.12);
+  color: #002a49;
 }
