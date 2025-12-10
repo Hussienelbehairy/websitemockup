@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, type ReactElement } from "react";
 import { Button } from "../../ui/button";
 import clsx from "clsx";
 import { useLocale } from "@/app/providers/locale-provider";
@@ -9,7 +9,7 @@ import { useCmsContent } from "@/app/providers/cms-provider";
 
 type MenuType = "brands" | "solutions" | null;
 
-const iconMap: Record<string, JSX.Element> = {
+const iconMap: Record<string, ReactElement> = {
   location: (
     <svg width="16" height="16" viewBox="0 0 24 24" className="text-primary">
       <path

@@ -59,20 +59,24 @@ export function mergeCms(
 ): CmsData {
   if (!overrides) return base;
 
-  const merged: CmsData = {
-    ...base,
-    cmsUsers: overrides.cmsUsers ?? base.cmsUsers,
-  };
+  const mergedLocalized: Partial<
+    Record<LocalizedCmsSection, CmsData[LocalizedCmsSection]>
+  > = {};
 
   localizedSections.forEach((section) => {
-    const override = overrides[section] as Record<Locale, unknown> | undefined;
-    merged[section] = {
-      ...base[section],
+    const override =
+      overrides[section] as Partial<CmsData[typeof section]> | undefined;
+    mergedLocalized[section] = {
+      ...(base[section] as Record<string, unknown>),
       ...(override ?? {}),
     } as CmsData[typeof section];
   });
 
-  return merged;
+  return {
+    ...base,
+    ...mergedLocalized,
+    cmsUsers: overrides.cmsUsers ?? base.cmsUsers,
+  } as CmsData;
 }
 
 export function getLocalizedCmsSection<
